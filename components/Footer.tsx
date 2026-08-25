@@ -149,29 +149,26 @@ export const Footer: React.FC = () => {
               </li>
             </ul>
 
-            <div className="mt-5 p-3.5 rounded-xl bg-slate-800/80 border border-slate-700">
-              <div className="flex items-center gap-2 text-xs font-bold text-teal-400 mb-1.5">
-                <Clock className="w-4 h-4" />
+            <div className="mt-5 p-3.5 rounded-xl bg-slate-800/80 border border-slate-700/80 space-y-2">
+              <div className="flex items-center gap-2 text-xs font-bold text-teal-400 pb-1 border-b border-slate-700/60">
+                <Clock className="w-4 h-4 text-teal-400 shrink-0" />
                 <span>OPD Clinic Hours</span>
               </div>
-              {clinicConfig.openingHours.map((oh, idx) => (
-                <div key={idx} className="text-xs text-slate-300 flex justify-between py-0.5">
-                  <span>{oh.days}:</span>
-                  <span className="font-semibold text-white">{oh.hours}</span>
-                </div>
-              ))}
+              <div className="space-y-1 text-xs text-slate-300">
+                {clinicConfig.openingHours.map((oh, idx) => (
+                  <div key={idx} className="flex items-center justify-between gap-2 whitespace-nowrap">
+                    <span className="text-slate-400 font-medium">{oh.days}:</span>
+                    <span className="font-bold text-white tracking-tight">{oh.hours}</span>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-slate-800 flex flex-col md:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+        <div className="pt-8 border-t border-slate-800 flex flex-col md:flex-row items-center justify-center md:justify-between text-xs text-slate-500 gap-4 text-center">
           <p>© {new Date().getFullYear()} {clinicConfig.name}. All rights reserved.</p>
-          <div className="flex items-center gap-6">
-            <span>Privacy Policy</span>
-            <span>Terms of Service</span>
-            <span>Sterilization Guarantee</span>
-          </div>
         </div>
       </div>
     </footer>

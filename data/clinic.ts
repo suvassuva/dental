@@ -11,8 +11,8 @@ export const clinicConfig = {
   address: "123 Healthcare Boulevard, Indiranagar, Bangalore, Karnataka 560038, India",
   googleMapsUrl: "https://maps.google.com/?q=Indiranagar+Bangalore",
   openingHours: [
-    { days: "Monday – Saturday", hours: "9:00 AM – 8:00 PM" },
-    { days: "Sunday", hours: "10:00 AM – 2:00 PM (Emergency Only)" }
+    { days: "Mon – Sat", hours: "9:00 AM – 8:00 PM" },
+    { days: "Sun (Emergency)", hours: "10:00 AM – 2:00 PM" }
   ],
   stats: {
     experience: "10+ Years Experience",

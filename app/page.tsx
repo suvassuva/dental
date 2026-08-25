@@ -14,8 +14,11 @@ import {
 import { Hero } from "@/components/Hero";
 import { SectionHeading } from "@/components/SectionHeading";
 import { ServiceCard } from "@/components/ServiceCard";
+import { AutoScrollServices } from "@/components/AutoScrollServices";
 import { DoctorCard } from "@/components/DoctorCard";
+import { AutoScrollDoctors } from "@/components/AutoScrollDoctors";
 import { TestimonialCard } from "@/components/TestimonialCard";
+import { AutoScrollReviews } from "@/components/AutoScrollReviews";
 import { BeforeAfter } from "@/components/BeforeAfter";
 import { GalleryGrid } from "@/components/GalleryGrid";
 import { FAQAccordion } from "@/components/FAQAccordion";
@@ -111,11 +114,7 @@ export default function HomePage() {
           subtitle="From preventive checkups to complex full-mouth digital smile makeovers."
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8">
-          {featuredServices.map((service, idx) => (
-            <ServiceCard key={service.id} service={service} index={idx} />
-          ))}
-        </div>
+        <AutoScrollServices services={featuredServices} />
 
         <div className="mt-6 sm:mt-12 text-center">
           <Button href="/services" variant="outline" size="md">
@@ -198,11 +197,7 @@ export default function HomePage() {
           subtitle="Experienced dental surgeons dedicated to your comfort and health."
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-8">
-          {featuredDoctors.map((doctor, idx) => (
-            <DoctorCard key={doctor.id} doctor={doctor} index={idx} />
-          ))}
-        </div>
+        <AutoScrollDoctors doctors={featuredDoctors} />
 
         <div className="mt-6 sm:mt-10 text-center">
           <Button href="/doctors" variant="outline" size="md">
@@ -231,11 +226,7 @@ export default function HomePage() {
           subtitle={`Read genuine experiences from individuals who restored their smiles at ${clinicConfig.shortName}.`}
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8">
-          {testimonialsData.slice(0, 3).map((item, idx) => (
-            <TestimonialCard key={item.id} testimonial={item} index={idx} />
-          ))}
-        </div>
+        <AutoScrollReviews testimonials={testimonialsData.slice(0, 3)} />
 
         <div className="mt-10 text-center">
           <Button href="/reviews" variant="outline" size="md">

@@ -45,10 +45,10 @@ export const Header: React.FC = () => {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
+        className={`fixed top-0 left-0 right-0 z-50 bg-white transition-all duration-300 ${
           isScrolled
-            ? "glass-header shadow-md border-b border-slate-200/60 py-2 sm:py-3"
-            : "bg-white/90 backdrop-blur-md py-2.5 sm:py-4 border-b border-slate-100"
+            ? "shadow-md border-b border-slate-200/80 py-2 sm:py-3"
+            : "py-2.5 sm:py-4 border-b border-slate-100"
         }`}
       >
         <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
@@ -113,15 +113,7 @@ export const Header: React.FC = () => {
             </div>
 
             {/* Mobile Hamburger Menu Button */}
-            <div className="flex lg:hidden items-center gap-1.5">
-              <a
-                href={`tel:${clinicConfig.phone}`}
-                className="p-2 rounded-full bg-teal-50 text-teal-700 hover:bg-teal-100 transition-colors"
-                aria-label="Call clinic"
-              >
-                <Phone className="w-4 h-4" />
-              </a>
-
+            <div className="flex lg:hidden items-center">
               <button
                 onClick={() => setMobileMenuOpen(true)}
                 className="p-2 rounded-lg bg-slate-100 text-slate-800 hover:bg-teal-50 hover:text-teal-700 transition-colors"

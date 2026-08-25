@@ -1,8 +1,10 @@
 import React from "react";
+import Image from "next/image";
 import { Metadata } from "next";
 import { Star, ShieldCheck, ThumbsUp, MessageSquare } from "lucide-react";
 import { SectionHeading } from "@/components/SectionHeading";
 import { TestimonialCard } from "@/components/TestimonialCard";
+import { AutoScrollReviews } from "@/components/AutoScrollReviews";
 import { AppointmentCTA } from "@/components/AppointmentCTA";
 import { testimonialsData } from "@/data/testimonials";
 
@@ -17,19 +19,58 @@ export default function ReviewsPage() {
   return (
     <div className="pt-28 pb-20 space-y-16 sm:space-y-24">
       {/* Hero Header */}
-      <section className="bg-gradient-to-b from-teal-50/40 via-white to-slate-50 py-16 sm:py-20 border-b border-slate-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
-          <span className="px-3.5 py-1.5 rounded-full bg-teal-50 text-teal-800 border border-teal-200 text-xs font-bold uppercase tracking-wider">
-            Patient Stories
-          </span>
+      <section className="bg-gradient-to-b from-teal-50/40 via-white to-slate-50 py-10 sm:py-16 border-b border-slate-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+            <div className="lg:col-span-7 space-y-4 sm:space-y-6 text-center lg:text-left">
+              <span className="inline-block px-3 py-1 rounded-full bg-teal-50 text-teal-800 border border-teal-200 text-xs font-bold uppercase tracking-wider">
+                Patient Stories
+              </span>
 
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-black text-slate-900 tracking-tight">
-            Trusted by Our <span className="text-gradient">Patients</span>
-          </h1>
+              <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-tight">
+                Trusted by Our <span className="text-gradient">Patients</span>
+              </h1>
 
-          <p className="text-base sm:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-            See how our gentle care, skilled specialists, and modern dental solutions have transformed thousands of smiles.
-          </p>
+              <p className="text-sm sm:text-lg text-slate-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                See how our gentle care, skilled specialists, and modern dental solutions have transformed thousands of smiles across Bangalore.
+              </p>
+
+              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 text-xs font-semibold text-slate-700">
+                <span className="flex items-center gap-1.5 bg-white px-3 py-1.5 rounded-lg border border-slate-200/80 shadow-xs">
+                  <Star className="w-4 h-4 text-amber-500 fill-amber-500" />
+                  4.9/5 Rating (1,200+ Reviews)
+                </span>
+                <span className="flex items-center gap-1.5 bg-white px-3 py-1.5 rounded-lg border border-slate-200/80 shadow-xs">
+                  <ShieldCheck className="w-4 h-4 text-teal-600" />
+                  100% Verified Patients
+                </span>
+              </div>
+            </div>
+
+            <div className="lg:col-span-5 relative">
+              <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
+                <div className="relative h-60 sm:h-72 lg:h-80 w-full">
+                  <Image
+                    src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=800"
+                    alt="Happy Patient Confident Smile Makeover"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover"
+                    priority
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent" />
+                </div>
+                <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md p-3 rounded-xl border border-slate-200/80 shadow-md flex items-center justify-between text-xs font-bold text-slate-900">
+                  <span className="flex items-center gap-1">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="w-3.5 h-3.5 text-amber-500 fill-amber-500" />
+                    ))}
+                  </span>
+                  <span className="text-teal-700 font-extrabold">99.4% Recommendation Rate</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -82,11 +123,7 @@ export default function ReviewsPage() {
           subtitle="Real, unedited feedback from individuals treated at our Indiranagar clinic."
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-          {testimonialsData.map((item, idx) => (
-            <TestimonialCard key={item.id} testimonial={item} index={idx} />
-          ))}
-        </div>
+        <AutoScrollReviews testimonials={testimonialsData} />
       </section>
 
       {/* Final Callout CTA */}

@@ -53,19 +53,57 @@ export default function AboutPage() {
   return (
     <div className="pt-28 pb-20 space-y-20 sm:space-y-28">
       {/* About Hero */}
-      <section className="bg-gradient-to-b from-teal-50/40 via-white to-slate-50 py-16 sm:py-24 border-b border-slate-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
-          <span className="px-3.5 py-1.5 rounded-full bg-teal-50 text-teal-800 border border-teal-200 text-xs font-bold uppercase tracking-wider">
-            Discover {clinicConfig.shortName}
-          </span>
+      <section className="bg-gradient-to-b from-teal-50/40 via-white to-slate-50 py-10 sm:py-16 border-b border-slate-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+            <div className="lg:col-span-7 space-y-4 sm:space-y-6 text-center lg:text-left">
+              <span className="inline-block px-3 py-1 rounded-full bg-teal-50 text-teal-800 border border-teal-200 text-xs font-bold uppercase tracking-wider">
+                Discover {clinicConfig.shortName}
+              </span>
 
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-black text-slate-900 tracking-tight">
-            Modern Dentistry. <span className="text-gradient">Personal Care.</span>
-          </h1>
+              <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-tight">
+                Modern Dentistry. <span className="text-gradient">Personal Care.</span>
+              </h1>
 
-          <p className="text-base sm:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-            Founded with a vision to redefine dental healthcare, {clinicConfig.name} combines state-of-the-art technology with deeply compassionate patient care.
-          </p>
+              <p className="text-sm sm:text-lg text-slate-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                Founded with a vision to redefine dental healthcare, {clinicConfig.name} combines state-of-the-art 3D technology with deeply compassionate patient care.
+              </p>
+
+              <div className="pt-2 flex flex-wrap items-center justify-center lg:justify-start gap-3">
+                <Button href="/appointment" variant="primary" size="md">
+                  Book Consultation
+                </Button>
+                <Button href="/services" variant="outline" size="md">
+                  View Services
+                </Button>
+              </div>
+            </div>
+
+            <div className="lg:col-span-5 relative">
+              <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
+                <div className="relative h-64 sm:h-80 lg:h-96 w-full">
+                  <Image
+                    src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=800"
+                    alt={`${clinicConfig.name} Reception & Facility`}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover"
+                    priority
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent" />
+                </div>
+                <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md p-3.5 rounded-xl border border-slate-200/80 shadow-lg flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-lg bg-teal-100 text-teal-800 flex items-center justify-center font-bold text-base shrink-0">
+                    10+
+                  </div>
+                  <div>
+                    <h4 className="text-xs font-bold text-slate-900">Years of Clinical Excellence</h4>
+                    <p className="text-[11px] text-slate-500">10,000+ Happy Patient Smiles</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

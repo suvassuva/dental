@@ -47,12 +47,12 @@ export const Hero: React.FC = () => {
             </p>
 
             {/* Action CTAs */}
-            <div className="flex flex-row items-center justify-center lg:justify-start gap-2.5 sm:gap-4 pt-1 sm:pt-2">
+            <div className="flex flex-row items-center justify-center lg:justify-start gap-2 sm:gap-4 pt-1 sm:pt-2">
               <Button
                 href="/appointment"
                 variant="primary"
                 size="md"
-                icon={<Calendar className="w-4 h-4" />}
+                icon={<Calendar className="w-3.5 h-3.5 sm:w-5 sm:h-5 shrink-0" />}
               >
                 Book Appointment
               </Button>
@@ -61,7 +61,7 @@ export const Hero: React.FC = () => {
                 href={whatsappUrl}
                 variant="whatsapp"
                 size="md"
-                icon={<MessageCircle className="w-4 h-4" />}
+                icon={<MessageCircle className="w-3.5 h-3.5 sm:w-5 sm:h-5 shrink-0" />}
               >
                 WhatsApp Us
               </Button>
