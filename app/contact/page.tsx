@@ -354,7 +354,7 @@ export default function ContactPage() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="rounded-3xl overflow-hidden shadow-xl border border-slate-200 relative h-96 bg-slate-200">
           <iframe
-            title="SmileCare Dental Clinic Location Map"
+            title={`${clinicConfig.name} Location Map`}
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.973499427357!2d77.6409893!3d12.9731215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDU4JzIzLjIiTiA3N8KwMzgnMjcuNiJF!5e0!3m2!1sen!2sin!4v1625000000000!5m2!1sen!2sin"
             width="100%"
             height="100%"

@@ -4,10 +4,11 @@ import { SectionHeading } from "@/components/SectionHeading";
 import { ServiceCard } from "@/components/ServiceCard";
 import { AppointmentCTA } from "@/components/AppointmentCTA";
 import { servicesData } from "@/data/services";
+import { clinicConfig } from "@/data/clinic";
 
 export const metadata: Metadata = {
-  title: "All Dental Services | SmileCare Dental Clinic",
-  description: "Explore complete dental treatments at SmileCare: Dental Implants, Root Canal, Laser Whitening, Clear Aligners, Orthodontics, Cosmetic Veneers, and Pediatric Care."
+  title: `All Dental Services | ${clinicConfig.name}`,
+  description: `Explore complete dental treatments at ${clinicConfig.shortName}: Dental Implants, Root Canal, Laser Whitening, Clear Aligners, Orthodontics, Cosmetic Veneers, and Pediatric Care.`
 };
 
 export default function ServicesPage() {

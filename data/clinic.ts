@@ -1,5 +1,8 @@
 export const clinicConfig = {
   name: "SmileCare Dental Clinic",
+  shortName: "SmileCare",
+  subName: "Dental Clinic",
+  initialLetter: "S",
   tagline: "Your Smile. Our Expertise.",
   description: "Advanced dental care designed around your comfort, health, and confidence. Experience world-class dentistry with state-of-the-art technology.",
   phone: "+91 98765 43210",

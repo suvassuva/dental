@@ -20,14 +20,14 @@ export const Footer: React.FC = () => {
           <div className="space-y-4">
             <Link href="/" className="flex items-center gap-3 inline-block">
               <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-teal-500 to-teal-700 flex items-center justify-center text-white font-black text-2xl shadow-lg">
-                S
+                {clinicConfig.initialLetter || clinicConfig.shortName[0]}
               </div>
               <div className="flex flex-col">
                 <span className="text-xl font-extrabold text-white tracking-tight leading-none">
-                  SmileCare
+                  {clinicConfig.shortName}
                 </span>
                 <span className="text-[11px] font-semibold tracking-widest text-teal-400 uppercase mt-0.5">
-                  Dental Clinic
+                  {clinicConfig.subName}
                 </span>
               </div>
             </Link>

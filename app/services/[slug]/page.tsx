@@ -2,6 +2,7 @@ import React from "react";
 import { Metadata } from "next";
 import { serviceDetailsData } from "@/data/services";
 import { ServiceLandingPage } from "@/components/ServiceLandingPage";
+import { clinicConfig } from "@/data/clinic";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -13,12 +14,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   if (!detail) {
     return {
-      title: "Service Not Found | SmileCare Dental Clinic"
+      title: `Service Not Found | ${clinicConfig.name}`
     };
   }
 
   return {
-    title: `${detail.title} | SmileCare Dental Clinic`,
+    title: `${detail.title} | ${clinicConfig.name}`,
     description: detail.subtitle
   };
 }

@@ -4,9 +4,11 @@ import { SectionHeading } from "@/components/SectionHeading";
 import { GalleryGrid } from "@/components/GalleryGrid";
 import { AppointmentCTA } from "@/components/AppointmentCTA";
 
+import { clinicConfig } from "@/data/clinic";
+
 export const metadata: Metadata = {
-  title: "Clinic Gallery | SmileCare Dental Clinic",
-  description: "Take a visual tour of SmileCare Dental Clinic: our luxury lounge, operatory suites, 3D CBCT digital technology, and smile transformations."
+  title: `Clinic Gallery | ${clinicConfig.name}`,
+  description: `Take a visual tour of ${clinicConfig.name}: our luxury lounge, operatory suites, 3D CBCT digital technology, and smile transformations.`
 };
 
 export default function GalleryPage() {

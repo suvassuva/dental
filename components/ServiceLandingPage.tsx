@@ -164,7 +164,7 @@ export const ServiceLandingPage: React.FC<ServiceLandingPageProps> = ({ slug }) 
         <SectionHeading
           badge="Treatment Journey"
           title="Step-by-Step Procedure"
-          subtitle="What to expect during your visits at SmileCare."
+          subtitle={`What to expect during your visits at ${clinicConfig.shortName}.`}
           dark
         />
 
@@ -196,7 +196,7 @@ export const ServiceLandingPage: React.FC<ServiceLandingPageProps> = ({ slug }) 
               Trust & Expertise
             </span>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900">
-              Why Get Treated at SmileCare Dental Clinic?
+              Why Get Treated at {clinicConfig.name}?
             </h2>
             <ul className="space-y-3 pt-2">
               {detail.whyChooseUs.map((factor, idx) => (

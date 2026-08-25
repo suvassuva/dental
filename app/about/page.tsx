@@ -8,9 +8,11 @@ import { AppointmentCTA } from "@/components/AppointmentCTA";
 import { doctorsData } from "@/data/doctors";
 import { Button } from "@/components/Button";
 
+import { clinicConfig } from "@/data/clinic";
+
 export const metadata: Metadata = {
-  title: "About Us | SmileCare Dental Clinic",
-  description: "Learn about SmileCare Dental Clinic, our expert dental surgeons, state-of-the-art 3D technology, and patient-first treatment philosophy."
+  title: `About Us | ${clinicConfig.name}`,
+  description: `Learn about ${clinicConfig.name}, our expert dental surgeons, state-of-the-art 3D technology, and patient-first treatment philosophy.`
 };
 
 export default function AboutPage() {
@@ -54,7 +56,7 @@ export default function AboutPage() {
       <section className="bg-gradient-to-b from-teal-50/40 via-white to-slate-50 py-16 sm:py-24 border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
           <span className="px-3.5 py-1.5 rounded-full bg-teal-50 text-teal-800 border border-teal-200 text-xs font-bold uppercase tracking-wider">
-            Discover SmileCare
+            Discover {clinicConfig.shortName}
           </span>
 
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-black text-slate-900 tracking-tight">
@@ -62,7 +64,7 @@ export default function AboutPage() {
           </h1>
 
           <p className="text-base sm:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-            Founded with a vision to redefine dental healthcare in Bangalore, SmileCare combines state-of-the-art technology with deeply compassionate patient care.
+            Founded with a vision to redefine dental healthcare, {clinicConfig.name} combines state-of-the-art technology with deeply compassionate patient care.
           </p>
         </div>
       </section>
@@ -78,7 +80,7 @@ export default function AboutPage() {
               Built on Trust, Precision, and Clinical Passion
             </h2>
             <p className="text-base text-slate-600 leading-relaxed">
-              SmileCare Dental Clinic began over a decade ago with a simple mission: to eliminate the fear associated with dental visits and replace it with world-class, comfortable healthcare.
+              {clinicConfig.name} began over a decade ago with a simple mission: to eliminate the fear associated with dental visits and replace it with world-class, comfortable healthcare.
             </p>
             <p className="text-base text-slate-600 leading-relaxed">
               What started as a boutique dental practice has grown into a multi-specialty center equipped with 3D digital imaging, laser therapy, and custom cosmetic smile design suites—having served over 10,000 satisfied patients.
@@ -100,7 +102,7 @@ export default function AboutPage() {
             <div className="relative h-[400px] sm:h-[480px] w-full rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
               <Image
                 src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&q=80&w=1000"
-                alt="SmileCare Dental Clinic Doctors Collaborating"
+                alt={`${clinicConfig.name} Doctors Collaborating`}
                 fill
                 className="object-cover"
               />

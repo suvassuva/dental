@@ -6,9 +6,11 @@ import { TestimonialCard } from "@/components/TestimonialCard";
 import { AppointmentCTA } from "@/components/AppointmentCTA";
 import { testimonialsData } from "@/data/testimonials";
 
+import { clinicConfig } from "@/data/clinic";
+
 export const metadata: Metadata = {
-  title: "Patient Reviews & Testimonials | SmileCare Dental Clinic",
-  description: "Read genuine 5-star patient reviews and testimonials for dental implants, root canals, clear aligners, and smile makeovers at SmileCare."
+  title: `Patient Reviews & Testimonials | ${clinicConfig.name}`,
+  description: `Read genuine 5-star patient reviews and testimonials for dental implants, root canals, clear aligners, and smile makeovers at ${clinicConfig.shortName}.`
 };
 
 export default function ReviewsPage() {

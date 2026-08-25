@@ -17,7 +17,7 @@ export const testimonialsData: Testimonial[] = [
     location: "Bangalore",
     rating: 5,
     treatment: "Dental Implants",
-    review: "SmileCare is by far the best dental clinic I have ever visited. Dr. Sharma placed two implants with zero pain during the procedure. The results feel completely natural!",
+    review: "This clinic is by far the best dental practice I have ever visited. Dr. Sharma placed two implants with zero pain during the procedure. The results feel completely natural!",
     avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200",
     date: "2 weeks ago",
     verified: true
@@ -50,7 +50,7 @@ export const testimonialsData: Testimonial[] = [
     location: "Bangalore",
     rating: 5,
     treatment: "Porcelain Veneers",
-    review: "Getting my smile makeover at SmileCare was the best decision of my life! The porcelain veneers look so luminous and natural. People constantly compliment my smile.",
+    review: "Getting my smile makeover at this clinic was the best decision of my life! The porcelain veneers look so luminous and natural. People constantly compliment my smile.",
     avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=200",
     date: "2 months ago",
     verified: true

@@ -56,14 +56,14 @@ export const Header: React.FC = () => {
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2 sm:gap-3 group">
               <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-gradient-to-br from-teal-700 to-teal-500 flex items-center justify-center text-white font-black text-lg sm:text-2xl shadow-md shadow-teal-700/20 group-hover:scale-105 transition-transform duration-300">
-                S
+                {clinicConfig.initialLetter || clinicConfig.shortName[0]}
               </div>
               <div className="flex flex-col">
                 <span className="text-base sm:text-xl font-extrabold text-slate-900 tracking-tight leading-none group-hover:text-teal-700 transition-colors">
-                  SmileCare
+                  {clinicConfig.shortName}
                 </span>
                 <span className="text-[9px] sm:text-[11px] font-semibold tracking-widest text-teal-700 uppercase mt-0.5">
-                  Dental Clinic
+                  {clinicConfig.subName}
                 </span>
               </div>
             </Link>

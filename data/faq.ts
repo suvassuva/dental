@@ -20,7 +20,7 @@ export const faqData: FAQItem[] = [
     id: "1",
     category: "General Dentistry",
     question: "How often should I visit the dentist for a routine checkup?",
-    answer: "We recommend visiting SmileCare every 6 months for a routine dental checkup and professional cleaning. Regular visits allow us to detect plaque buildup, early cavities, and gum inflammation before they require extensive treatment."
+    answer: "We recommend visiting our clinic every 6 months for a routine dental checkup and professional cleaning. Regular visits allow us to detect plaque buildup, early cavities, and gum inflammation before they require extensive treatment."
   },
   {
     id: "2",

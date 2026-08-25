@@ -26,6 +26,7 @@ import { servicesData } from "@/data/services";
 import { doctorsData } from "@/data/doctors";
 import { testimonialsData } from "@/data/testimonials";
 import { faqData } from "@/data/faq";
+import { clinicConfig } from "@/data/clinic";
 
 export default function HomePage() {
   const whyChooseUsCards = [
@@ -73,7 +74,7 @@ export default function HomePage() {
       {/* Why Choose Us */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
-          badge="The SmileCare Difference"
+          badge={`The ${clinicConfig.shortName} Difference`}
           title="Exceptional Care. Exceptional Smiles."
           subtitle="Why thousands of patients trust us as their premier family dental healthcare provider."
         />
@@ -131,7 +132,7 @@ export default function HomePage() {
             <div className="relative h-[250px] sm:h-[500px] rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl sm:shadow-2xl border-2 sm:border-4 border-white">
               <Image
                 src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=1000"
-                alt="SmileCare Dental Clinic Interior Reception"
+                alt={`${clinicConfig.name} Interior Reception`}
                 fill
                 className="object-cover"
               />
@@ -158,7 +159,7 @@ export default function HomePage() {
             </h2>
 
             <p className="text-xs sm:text-base text-slate-600 leading-relaxed">
-              At SmileCare Dental Clinic, we believe every patient deserves a healthy, radiant smile delivered in an atmosphere of warmth and trust. Founded by leading dental surgeons, our facility brings world-class dental care to Indiranagar, Bangalore.
+              At {clinicConfig.name}, we believe every patient deserves a healthy, radiant smile delivered in an atmosphere of warmth and trust. Founded by leading dental surgeons, our facility brings world-class dental care to your location.
             </p>
 
             <ul className="space-y-2 sm:space-y-3.5">
@@ -227,7 +228,7 @@ export default function HomePage() {
         <SectionHeading
           badge="Patient Proof"
           title="Trusted by Our Patients"
-          subtitle="Read genuine experiences from individuals who restored their smiles at SmileCare."
+          subtitle={`Read genuine experiences from individuals who restored their smiles at ${clinicConfig.shortName}.`}
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8">

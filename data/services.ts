@@ -415,7 +415,7 @@ export const serviceDetailsData: Record<string, ServiceDetail> = {
       { question: "Are dental X-rays safe for children?", answer: "Yes! We use ultra-low radiation digital X-rays with lead aprons designed specifically for children." }
     ],
     testimonials: [
-      { name: "Meera Deshmukh", review: "My 6-year-old son used to cry at the dentist. SmileCare turned it into a fun game! He actually looks forward to his dental checkups now.", rating: 5, treatment: "Pediatric Cleaning & Sealants" }
+      { name: "Meera Deshmukh", review: "My 6-year-old son used to cry at the dentist. The team here turned it into a fun game! He actually looks forward to his dental checkups now.", rating: 5, treatment: "Pediatric Cleaning & Sealants" }
     ],
     beforeAfter: [
       { before: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=600", after: "https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&q=80&w=600", caption: "Pediatric Tooth Restoration & Space Maintainer" }

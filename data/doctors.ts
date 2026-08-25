@@ -32,7 +32,7 @@ export const doctorsData: Doctor[] = [
     qualification: "BDS, MDS (Endodontics & Restorative Dentistry)",
     specialization: "Root Canal Specialist & Cosmetic Dentist",
     experience: "11+ Years",
-    image: "https://images.unsplash.com/photo-1594824813571-215f396469a0?auto=format&fit=crop&q=80&w=800",
+    image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=800",
     bio: "Dr. Ananya Mehra specializes in painless single-visit microscopic root canal therapy and smile aesthetic makeovers. Her gentle bedside manner and meticulous precision have earned her raving reviews from thousands of satisfied patients.",
     schedule: "Mon - Sat: 11:00 AM - 7:30 PM",
     highlights: [

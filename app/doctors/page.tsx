@@ -7,10 +7,11 @@ import { DoctorCard } from "@/components/DoctorCard";
 import { AppointmentCTA } from "@/components/AppointmentCTA";
 import { Button } from "@/components/Button";
 import { doctorsData } from "@/data/doctors";
+import { clinicConfig } from "@/data/clinic";
 
 export const metadata: Metadata = {
-  title: "Our Doctors & Specialists | SmileCare Dental Clinic",
-  description: "Meet Bangalore's leading dental surgeons, MDS gold-medalist endodontists, implantologists, and orthodontists at SmileCare Dental Clinic."
+  title: `Our Doctors & Specialists | ${clinicConfig.name}`,
+  description: `Meet leading dental surgeons, MDS gold-medalist endodontists, implantologists, and orthodontists at ${clinicConfig.name}.`
 };
 
 export default function DoctorsPage() {

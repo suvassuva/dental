@@ -47,14 +47,14 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose, navLink
             <div className="flex items-center justify-between p-5 border-b border-slate-100">
               <div className="flex items-center gap-2.5">
                 <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-teal-700 to-teal-500 flex items-center justify-center text-white font-black text-xl shadow-md">
-                  S
+                  {clinicConfig.initialLetter || clinicConfig.shortName[0]}
                 </div>
                 <div>
                   <span className="text-base font-bold text-slate-900 leading-tight block">
-                    SmileCare
+                    {clinicConfig.shortName}
                   </span>
                   <span className="text-[10px] uppercase tracking-wider font-semibold text-teal-700 block">
-                    Dental Clinic
+                    {clinicConfig.subName}
                   </span>
                 </div>
               </div>

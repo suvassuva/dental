@@ -116,7 +116,7 @@ function AppointmentFormContent() {
         <div className="p-6 rounded-3xl bg-teal-50 border border-teal-100 space-y-2 text-xs text-teal-900">
           <div className="flex items-center gap-2 font-bold text-sm text-teal-900 mb-1">
             <ShieldCheck className="w-4 h-4 text-teal-700" />
-            <span>SmileCare Booking Guarantee</span>
+            <span>{clinicConfig.shortName} Booking Guarantee</span>
           </div>
           <p className="leading-relaxed">
             ✔ Zero Registration Fees<br />
