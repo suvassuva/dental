@@ -32,11 +32,11 @@ export const SectionHeading: React.FC<SectionHeadingProps> = ({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 0.5 }}
-      className={`flex flex-col max-w-3xl mb-12 sm:mb-16 ${alignClasses[align]} ${className}`}
+      className={`flex flex-col max-w-3xl mb-6 sm:mb-16 ${alignClasses[align]} ${className}`}
     >
       {badge && (
         <span
-          className={`inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase mb-3 ${
+          className={`inline-flex items-center gap-1.5 px-2.5 py-1 sm:px-3.5 sm:py-1.5 rounded-full text-[10px] sm:text-xs font-semibold tracking-wider uppercase mb-2 sm:mb-3 ${
             dark
               ? "bg-teal-900/60 text-teal-300 border border-teal-700/50"
               : "bg-teal-50 text-teal-800 border border-teal-200/80"
@@ -47,7 +47,7 @@ export const SectionHeading: React.FC<SectionHeadingProps> = ({
         </span>
       )}
       <h2
-        className={`text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight ${
+        className={`text-xl sm:text-3xl md:text-4xl font-bold sm:font-extrabold tracking-tight ${
           dark ? "text-white" : "text-slate-900"
         }`}
       >
@@ -55,7 +55,7 @@ export const SectionHeading: React.FC<SectionHeadingProps> = ({
       </h2>
       {subtitle && (
         <p
-          className={`mt-4 text-base sm:text-lg leading-relaxed ${
+          className={`mt-2 sm:mt-4 text-xs sm:text-lg leading-relaxed ${
             dark ? "text-slate-300" : "text-slate-600"
           }`}
         >

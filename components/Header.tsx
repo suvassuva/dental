@@ -47,22 +47,22 @@ export const Header: React.FC = () => {
       <header
         className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
           isScrolled
-            ? "glass-header shadow-md border-b border-slate-200/60 py-3"
-            : "bg-white/90 backdrop-blur-md py-4 border-b border-slate-100"
+            ? "glass-header shadow-md border-b border-slate-200/60 py-2 sm:py-3"
+            : "bg-white/90 backdrop-blur-md py-2.5 sm:py-4 border-b border-slate-100"
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-3 group">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-teal-700 to-teal-500 flex items-center justify-center text-white font-black text-2xl shadow-lg shadow-teal-700/20 group-hover:scale-105 transition-transform duration-300">
+            <Link href="/" className="flex items-center gap-2 sm:gap-3 group">
+              <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-gradient-to-br from-teal-700 to-teal-500 flex items-center justify-center text-white font-black text-lg sm:text-2xl shadow-md shadow-teal-700/20 group-hover:scale-105 transition-transform duration-300">
                 S
               </div>
               <div className="flex flex-col">
-                <span className="text-lg sm:text-xl font-extrabold text-slate-900 tracking-tight leading-none group-hover:text-teal-700 transition-colors">
+                <span className="text-base sm:text-xl font-extrabold text-slate-900 tracking-tight leading-none group-hover:text-teal-700 transition-colors">
                   SmileCare
                 </span>
-                <span className="text-[11px] font-semibold tracking-widest text-teal-700 uppercase mt-0.5">
+                <span className="text-[9px] sm:text-[11px] font-semibold tracking-widest text-teal-700 uppercase mt-0.5">
                   Dental Clinic
                 </span>
               </div>
@@ -113,21 +113,21 @@ export const Header: React.FC = () => {
             </div>
 
             {/* Mobile Hamburger Menu Button */}
-            <div className="flex lg:hidden items-center gap-2">
+            <div className="flex lg:hidden items-center gap-1.5">
               <a
                 href={`tel:${clinicConfig.phone}`}
-                className="p-2.5 rounded-full bg-teal-50 text-teal-700"
+                className="p-2 rounded-full bg-teal-50 text-teal-700 hover:bg-teal-100 transition-colors"
                 aria-label="Call clinic"
               >
-                <Phone className="w-5 h-5" />
+                <Phone className="w-4 h-4" />
               </a>
 
               <button
                 onClick={() => setMobileMenuOpen(true)}
-                className="p-2.5 rounded-xl bg-slate-100 text-slate-800 hover:bg-teal-50 hover:text-teal-700 transition-colors"
+                className="p-2 rounded-lg bg-slate-100 text-slate-800 hover:bg-teal-50 hover:text-teal-700 transition-colors"
                 aria-label="Open navigation menu"
               >
-                <Menu className="w-6 h-6" />
+                <Menu className="w-5 h-5" />
               </button>
             </div>
           </div>

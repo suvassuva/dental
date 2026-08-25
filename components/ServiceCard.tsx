@@ -37,7 +37,7 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({ service, index = 0 }) 
       className="group bg-white rounded-2xl overflow-hidden border border-slate-200/80 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col h-full"
     >
       {/* Service Image Container */}
-      <div className="relative h-48 w-full overflow-hidden bg-slate-100">
+      <div className="relative h-36 sm:h-48 w-full overflow-hidden bg-slate-100">
         <Image
           src={service.image}
           alt={service.name}
@@ -47,24 +47,24 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({ service, index = 0 }) 
         <div className="absolute inset-0 bg-gradient-to-t from-slate-950/50 via-transparent to-transparent" />
         
         {/* Category Tag */}
-        <span className="absolute top-3 right-3 px-3 py-1 bg-white/90 backdrop-blur-md rounded-full text-[11px] font-bold text-teal-800 tracking-wide uppercase shadow-sm">
+        <span className="absolute top-2.5 right-2.5 px-2 py-0.5 sm:px-3 sm:py-1 bg-white/90 backdrop-blur-md rounded-full text-[9px] sm:text-[11px] font-bold text-teal-800 tracking-wide uppercase shadow-sm">
           {service.category}
         </span>
       </div>
 
       {/* Card Content */}
-      <div className="p-6 flex-1 flex flex-col justify-between space-y-4">
+      <div className="p-3.5 sm:p-6 flex-1 flex flex-col justify-between space-y-2.5 sm:space-y-4">
         <div>
-          <div className="flex items-center gap-3 mb-2.5">
-            <div className="p-2.5 rounded-xl bg-teal-50 border border-teal-100 shrink-0">
-              {iconMap[service.iconName] || <Smile className="w-5 h-5 text-teal-700" />}
+          <div className="flex items-center gap-2 sm:gap-3 mb-2">
+            <div className="p-1.5 sm:p-2.5 rounded-lg sm:rounded-xl bg-teal-50 border border-teal-100 shrink-0">
+              {iconMap[service.iconName] || <Smile className="w-4 h-4 sm:w-5 sm:h-5 text-teal-700" />}
             </div>
-            <h3 className="text-xl font-bold text-slate-900 group-hover:text-teal-700 transition-colors">
+            <h3 className="text-base sm:text-xl font-bold text-slate-900 group-hover:text-teal-700 transition-colors leading-snug">
               {service.name}
             </h3>
           </div>
 
-          <p className="text-sm text-slate-600 leading-relaxed">
+          <p className="text-xs sm:text-sm text-slate-600 leading-relaxed line-clamp-2 sm:line-clamp-3">
             {service.shortDescription}
           </p>
         </div>
@@ -73,10 +73,10 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({ service, index = 0 }) 
         <div className="pt-2 border-t border-slate-100">
           <Link
             href={`/services/${service.slug}`}
-            className="inline-flex items-center gap-2 text-sm font-bold text-teal-700 hover:text-teal-900 group/link transition-colors"
+            className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-teal-700 hover:text-teal-900 group/link transition-colors"
           >
             <span>Learn More & Pricing</span>
-            <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
+            <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 group-hover/link:translate-x-1 transition-transform" />
           </Link>
         </div>
       </div>

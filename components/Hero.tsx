@@ -14,45 +14,45 @@ export const Hero: React.FC = () => {
   const whatsappUrl = `https://wa.me/${clinicConfig.whatsapp.replace(/[^0-9]/g, "")}?text=${whatsappMessage}`;
 
   return (
-    <section className="relative pt-28 pb-16 lg:pt-36 lg:pb-24 overflow-hidden bg-gradient-to-b from-slate-50 via-teal-50/20 to-white">
+    <section className="relative pt-20 pb-8 sm:pt-28 sm:pb-16 lg:pt-36 lg:pb-24 overflow-hidden bg-gradient-to-b from-slate-50 via-teal-50/20 to-white">
       {/* Background Decorative Blur Circles */}
       <div className="absolute top-20 left-10 w-96 h-96 bg-teal-400/10 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-10 right-10 w-80 h-80 bg-teal-600/10 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-12 lg:gap-8 items-center">
           {/* Left Text Content */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
-            className="lg:col-span-7 space-y-6 text-center lg:text-left"
+            className="lg:col-span-7 space-y-3.5 sm:space-y-6 text-center lg:text-left"
           >
             {/* Top Badge */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-50 border border-teal-200 text-teal-800 text-xs font-bold tracking-wide uppercase">
-              <ShieldCheck className="w-4 h-4 text-teal-600" />
+            <div className="inline-flex items-center gap-1.5 px-2.5 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-teal-50 border border-teal-200 text-teal-800 text-[10px] sm:text-xs font-bold tracking-wide uppercase">
+              <ShieldCheck className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-teal-600 shrink-0" />
               <span>Multi-Specialty ISO 9001:2015 Certified Clinic</span>
             </div>
 
             {/* Headline */}
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-[1.15]">
+            <h1 className="text-2xl sm:text-5xl lg:text-6xl font-extrabold sm:font-black text-slate-900 tracking-tight leading-tight sm:leading-[1.15]">
               Your Smile. <br />
               <span className="text-gradient">Our Expertise.</span>
             </h1>
 
             {/* Subtitle */}
-            <p className="text-base sm:text-xl text-slate-600 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
+            <p className="text-xs sm:text-xl text-slate-600 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
               Advanced dental care designed around your comfort, health, and confidence.
-              Experience painless procedures, state-of-the-art 3D technology, and compassionate care.
+              Painless procedures, 3D technology, and compassionate care.
             </p>
 
             {/* Action CTAs */}
-            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+            <div className="flex flex-row items-center justify-center lg:justify-start gap-2.5 sm:gap-4 pt-1 sm:pt-2">
               <Button
                 href="/appointment"
                 variant="primary"
-                size="lg"
-                icon={<Calendar className="w-5 h-5" />}
+                size="md"
+                icon={<Calendar className="w-4 h-4" />}
               >
                 Book Appointment
               </Button>
@@ -60,26 +60,26 @@ export const Hero: React.FC = () => {
               <Button
                 href={whatsappUrl}
                 variant="whatsapp"
-                size="lg"
-                icon={<MessageCircle className="w-5 h-5" />}
+                size="md"
+                icon={<MessageCircle className="w-4 h-4" />}
               >
                 WhatsApp Us
               </Button>
             </div>
 
             {/* Quick Trust Highlights */}
-            <div className="pt-6 grid grid-cols-3 gap-3 border-t border-slate-200/80 max-w-xl mx-auto lg:mx-0">
+            <div className="pt-3 sm:pt-6 grid grid-cols-3 gap-2 sm:gap-3 border-t border-slate-200/80 max-w-xl mx-auto lg:mx-0">
               <div className="flex flex-col items-center lg:items-start">
-                <span className="text-lg sm:text-2xl font-black text-slate-900">10+ Years</span>
-                <span className="text-xs text-slate-500 font-medium">Experience</span>
+                <span className="text-base sm:text-2xl font-black text-slate-900">10+ Years</span>
+                <span className="text-[10px] sm:text-xs text-slate-500 font-medium">Experience</span>
               </div>
               <div className="flex flex-col items-center lg:items-start border-x border-slate-200 px-2">
-                <span className="text-lg sm:text-2xl font-black text-slate-900">10K+</span>
-                <span className="text-xs text-slate-500 font-medium">Happy Patients</span>
+                <span className="text-base sm:text-2xl font-black text-slate-900">10K+</span>
+                <span className="text-[10px] sm:text-xs text-slate-500 font-medium">Happy Patients</span>
               </div>
               <div className="flex flex-col items-center lg:items-start">
-                <span className="text-lg sm:text-2xl font-black text-slate-900">15+</span>
-                <span className="text-xs text-slate-500 font-medium">Treatments</span>
+                <span className="text-base sm:text-2xl font-black text-slate-900">15+</span>
+                <span className="text-[10px] sm:text-xs text-slate-500 font-medium">Treatments</span>
               </div>
             </div>
           </motion.div>
@@ -93,7 +93,7 @@ export const Hero: React.FC = () => {
           >
             <div className="relative mx-auto max-w-md lg:max-w-none">
               {/* Main Image Container */}
-              <div className="relative h-[380px] sm:h-[480px] w-full rounded-3xl overflow-hidden shadow-2xl shadow-teal-900/10 border-4 border-white">
+              <div className="relative h-[240px] sm:h-[480px] w-full rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl sm:shadow-2xl shadow-teal-900/10 border-2 sm:border-4 border-white">
                 <Image
                   src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=1000"
                   alt="Modern Dental Clinic Operatory with High Tech Equipment"
@@ -109,17 +109,17 @@ export const Hero: React.FC = () => {
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.5, duration: 0.4 }}
-                className="absolute -bottom-6 -left-4 sm:-left-8 bg-white p-4 rounded-2xl shadow-xl border border-slate-100 flex items-center gap-3"
+                className="absolute -bottom-4 -left-2 sm:-bottom-6 sm:-left-8 bg-white p-2.5 sm:p-4 rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl border border-slate-100 flex items-center gap-2 sm:gap-3"
               >
-                <div className="p-3 bg-amber-50 rounded-xl">
-                  <Star className="w-6 h-6 text-amber-500 fill-amber-500" />
+                <div className="p-2 sm:p-3 bg-amber-50 rounded-lg sm:rounded-xl">
+                  <Star className="w-4 h-4 sm:w-6 sm:h-6 text-amber-500 fill-amber-500" />
                 </div>
                 <div>
                   <div className="flex items-center gap-1">
-                    <span className="font-extrabold text-slate-900 text-lg">4.9</span>
-                    <span className="text-xs text-slate-500">(1,200+ Reviews)</span>
+                    <span className="font-extrabold text-slate-900 text-sm sm:text-lg">4.9</span>
+                    <span className="text-[10px] sm:text-xs text-slate-500">(1,200+ Reviews)</span>
                   </div>
-                  <span className="text-xs font-semibold text-slate-500 block">Top Rated Dental Clinic</span>
+                  <span className="text-[10px] sm:text-xs font-semibold text-slate-500 block">Top Rated Clinic</span>
                 </div>
               </motion.div>
 
